@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.header {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+}
+
+.header p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.description {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.submit-button,
+.cancel-button,
+.edit-button {
+  border: none;
+  border-radius: 7px;
+  padding: 11px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button {
+  grid-column: 1 / -1;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+.cancel-button {
+  grid-column: 1 / -1;
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.edit-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.edit-button:hover {
+  background: #d97706;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+tbody tr:hover {
+  background: #eff6ff;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button,
+  .cancel-button {
+    grid-column: auto;
+  }
+}
